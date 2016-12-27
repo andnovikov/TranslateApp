@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using TranslateApp.DB;
 
 namespace TranslateApp.Droid
 {
@@ -18,6 +19,14 @@ namespace TranslateApp.Droid
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
+
+            Database db = new Database();
+
+            ListView listView = (ListView)this.FindViewById(Resource.Id.listView);
+            if (listView != null)
+            {
+                Toast.MakeText(this, "ListView found.", ToastLength.Long).Show();
+            }
         }
     }
 }

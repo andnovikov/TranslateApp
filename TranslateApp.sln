@@ -12,6 +12,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		TranslateApp\TranslateApp\TranslateApp.projitems*{0ec1ab51-623d-411e-bbc7-180651f14d7b}*SharedItemsImports = 13
+		TranslateApp\TranslateApp\TranslateApp.projitems*{5bf8c1b5-dc6d-4a45-b668-99497684bf96}*SharedItemsImports = 4
 		TranslateApp\TranslateApp\TranslateApp.projitems*{d83770a9-8488-4571-974c-ef8265d950a2}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

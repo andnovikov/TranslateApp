@@ -61,7 +61,7 @@ namespace TranslateApp.Droid
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int sentText = 2131034112;
+			public const int listView = 2131034112;
 			
 			static Id()
 			{

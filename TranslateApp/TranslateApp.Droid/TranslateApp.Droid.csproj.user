@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Nexus 4 %28Marshmallow%29</SelectedDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
