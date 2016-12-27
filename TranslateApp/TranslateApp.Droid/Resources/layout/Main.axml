@@ -5,9 +5,5 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TextView
-        android:text="text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/sentText" />
+    
 </LinearLayout>
