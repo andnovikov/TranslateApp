@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using SQLite;
 
 namespace TranslateApp.DB
@@ -27,7 +29,7 @@ namespace TranslateApp.DB
                     new Word { SourceWord = "table", TranslateWord = "стол" }
                 };
 
-                insertUpdateAllData(wordList, Path);
+                insertUpdateAllWords(wordList, Path);
             }
             catch (SQLiteException ex)
             {
@@ -35,7 +37,7 @@ namespace TranslateApp.DB
             }
         }
 
-        private string insertUpdateData(Word data, string path)
+        private string insertUpdateWord(Word data, string path)
         {
             try
             {
@@ -50,7 +52,7 @@ namespace TranslateApp.DB
             }
         }
 
-        private string insertUpdateAllData(IEnumerable<Word> data, string path)
+        private string insertUpdateAllWords(IEnumerable<Word> data, string path)
         {
             try
             {
@@ -62,6 +64,26 @@ namespace TranslateApp.DB
             catch (SQLiteException ex)
             {
                 return ex.Message;
+            }
+        }
+
+        public List<Word> getAllWords()
+        {
+
+            try
+            {
+                var db = new SQLiteConnection(Path);
+                // this counts all records in the database, it can be slow depending on the size of the database
+                var result = db.Table<Word>().ToList<Word>();
+
+                // for a non-parameterless query
+                // var count = db.ExecuteScalar<int>("SELECT Count(*) FROM Person WHERE FirstName="Amy");
+
+                return result;
+            }
+            catch (SQLiteException ex)
+            {
+                return null;
             }
         }
     }
