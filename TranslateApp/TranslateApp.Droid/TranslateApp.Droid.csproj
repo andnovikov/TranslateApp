@@ -38,6 +38,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />

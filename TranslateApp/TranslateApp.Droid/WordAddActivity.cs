@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using TranslateApp.DB;
+
 namespace TranslateApp.Droid
 {
     [Activity(Label = "Add to dictionary")]
@@ -39,9 +41,27 @@ namespace TranslateApp.Droid
             // When Text is not null
             if (sharedText != null)
             {
+                /*EditText e = new EditText(this);
+                e.Text*/
+                EditText e = (EditText)FindViewById(Resource.Id.editSourceWord);
+                e.Text = sharedText;
+
                 // Show the text as Toast message
                 Toast.MakeText(this, sharedText, ToastLength.Long).Show();
             }
+        }
+
+        [Java.Interop.Export("OnClickBtnAdd")]
+        public void OnClickBtnAdd(View view)
+        {
+            Database db = new Database();
+
+            EditText eSourceWord = (EditText)FindViewById(Resource.Id.editSourceWord);
+            EditText eTranslateWord = (EditText)FindViewById(Resource.Id.editTranslateWord);
+
+            Word word = new Word() { SourceWord = eSourceWord.Text, TranslateWord = eTranslateWord.Text};
+
+            db.insertUpdateWord(word);
         }
     }
 }

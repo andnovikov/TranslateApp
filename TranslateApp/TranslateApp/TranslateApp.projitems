@@ -9,8 +9,8 @@
     <Import_RootNamespace>TranslateApp</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Database.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DBTables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DB\Database.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DB\Word.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 using Android.App;
 using Android.Content;
@@ -24,8 +25,10 @@ namespace TranslateApp.Droid
 			SetContentView (Resource.Layout.Main);
 
             Database db = new Database();
-            List<Word> words = db.getAllWords();
-            foreach (Word word in words)
+            db.DBInit();
+
+            Task<List<Word>> words = db.getAllWords();
+            foreach (Word word in words.Result)
             {
                 TextView textWord = new TextView(this) { Text = word.SourceWord};
                 var layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent,
