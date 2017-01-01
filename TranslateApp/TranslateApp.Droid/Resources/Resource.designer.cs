@@ -41,11 +41,30 @@ namespace TranslateApp.Droid
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int cellback = 2130968576;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int CustomWordSelector = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
 			
 			static Drawable()
 			{
@@ -60,17 +79,26 @@ namespace TranslateApp.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050003
-			public const int btnAdd = 2131034115;
+			// aapt resource value: 0x7f060001
+			public const int SourceWord = 2131099649;
 			
-			// aapt resource value: 0x7f050001
-			public const int editSourceWord = 2131034113;
+			// aapt resource value: 0x7f060000
+			public const int Text = 2131099648;
 			
-			// aapt resource value: 0x7f050002
-			public const int editTranslateWord = 2131034114;
+			// aapt resource value: 0x7f060002
+			public const int TranslateWord = 2131099650;
 			
-			// aapt resource value: 0x7f050000
-			public const int linearLayout = 2131034112;
+			// aapt resource value: 0x7f060003
+			public const int WordList = 2131099651;
+			
+			// aapt resource value: 0x7f060006
+			public const int btnAdd = 2131099654;
+			
+			// aapt resource value: 0x7f060004
+			public const int editSourceWord = 2131099652;
+			
+			// aapt resource value: 0x7f060005
+			public const int editTranslateWord = 2131099653;
 			
 			static Id()
 			{
@@ -86,10 +114,13 @@ namespace TranslateApp.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int CustomWordLayout = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int WordAdd = 2130903041;
+			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int WordAdd = 2130903042;
 			
 			static Layout()
 			{
@@ -104,11 +135,11 @@ namespace TranslateApp.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int app_name = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int hello = 2131034112;
 			
 			static String()
 			{

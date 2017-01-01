@@ -62,6 +62,8 @@ namespace TranslateApp.Droid
             Word word = new Word() { SourceWord = eSourceWord.Text, TranslateWord = eTranslateWord.Text};
 
             db.insertUpdateWord(word);
+
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
         }
     }
 }

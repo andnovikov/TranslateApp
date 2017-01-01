@@ -84,18 +84,26 @@ namespace TranslateApp.DB
             }
         }
 
-        public Task<List<Word>> getAllWords()
+        public async Task<List<Word>> getAllWordsAsync()
         {
 
             try
             {
-                var db = new SQLiteAsyncConnection(Path);
-                // this counts all records in the database, it can be slow depending on the size of the database
-                var result = db.Table<Word>().ToListAsync();
+                var result = await connectionAsync.Table<Word>().ToListAsync();
+                return result;
+            }
+            catch (SQLiteException ex)
+            {
+                return null;
+            }
+        }
 
-                // for a non-parameterless query
-                // var count = db.ExecuteScalar<int>("SELECT Count(*) FROM Person WHERE FirstName="Amy");
+        public List<Word> getAllWordsSync()
+        {
 
+            try
+            {
+                List<Word> result = connectionSync.Table<Word>().ToList<Word>();
                 return result;
             }
             catch (SQLiteException ex)

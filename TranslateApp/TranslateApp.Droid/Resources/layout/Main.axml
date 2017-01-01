@@ -4,7 +4,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:id="@+id/linearLayout">
-    
+    android:minHeight="25px">
+    <ListView
+        android:id="@+id/WordList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#FFDAFF7F" />
 </LinearLayout>
